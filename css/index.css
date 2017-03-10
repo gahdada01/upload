@@ -1,0 +1,184 @@
+@import url(https://fonts.googleapis.com/css?family=Raleway);
+body {
+  margin: 0;
+  overflow: auto;
+  font-family: "Raleway", serif;
+  background-color: #f3fde8;
+  position: relative; }
+
+.hidden {
+  display: none; }
+
+.center-position, .upload-file-upload, .upload-file-upload .form-label, .upload-file-upload .form-content, .upload-file-upload .file-list .file-item .delete-button-container, .upload-file-upload .file-list .file-item .delete-button-container .delete-button, .upload-file-upload .file-list .file-item .image-icon-container .image-container, .upload-file-upload .file-list .file-item .image-icon-container .image-container > img, .upload-file-upload .file-list .file-item .image-name, .upload-file-upload .file-list .file-item .image-filesize, .upload-file-upload .file-list .file-item .flag-icon-container, .upload-file-upload .file-list .file-item .flag-icon-container .custom-checkbox, .upload-file-upload .button {
+  margin: auto;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0; }
+
+.shadow, .upload-file-upload {
+  -webkit-box-shadow: 0px 0px 5px 1px rgba(0, 0, 0, 0.37);
+  -moz-box-shadow: 0px 0px 5px 1px rgba(0, 0, 0, 0.37);
+  box-shadow: 0px 0px 5px 1px rgba(0, 0, 0, 0.37); }
+
+@font-face {
+  font-family: 'Material Icons';
+  font-style: normal;
+  font-weight: 400;
+  src: url(font/iconfont/MaterialIcons-Regular.eot);
+  src: local("Material Icons"), local("MaterialIcons-Regular"), url(font/iconfont/MaterialIcons-Regular.woff2) format("woff2"), url(font/iconfont/MaterialIcons-Regular.woff) format("woff"), url(font/iconfont/MaterialIcons-Regular.ttf) format("truetype"); }
+.material-icons {
+  font-family: 'Material Icons';
+  font-weight: normal;
+  font-style: normal;
+  font-size: 24px;
+  /* Preferred icon size */
+  display: inline-block;
+  line-height: 1;
+  text-transform: none;
+  letter-spacing: normal;
+  word-wrap: normal;
+  white-space: nowrap;
+  direction: ltr;
+  /* Support for all WebKit browsers. */
+  -webkit-font-smoothing: antialiased;
+  /* Support for Safari and Chrome. */
+  text-rendering: optimizeLegibility;
+  /* Support for Firefox. */
+  -moz-osx-font-smoothing: grayscale;
+  /* Support for IE. */
+  font-feature-settings: 'liga'; }
+
+.upload-file-upload {
+  position: absolute;
+  width: 50%;
+  min-width: 400px;
+  height: 70%;
+  min-height: 400px;
+  background-color: white; }
+  .upload-file-upload .form-label {
+    width: 95%;
+    height: 100px;
+    color: #bfbfbf;
+    font-size: 40px;
+    text-align: center;
+    line-height: 100px;
+    border-bottom: solid 1px #bfbfbf;
+    margin-bottom: 10px; }
+  .upload-file-upload .form-content {
+    width: 95%;
+    height: calc(100% - 190px);
+    position: relative; }
+    .upload-file-upload .form-content .input-file {
+      position: absolute;
+      margin-left: 0;
+      width: 100%;
+      height: 100px;
+      opacity: 0;
+      z-index: 1; }
+      .upload-file-upload .form-content .input-file:hover {
+        cursor: pointer; }
+    .upload-file-upload .form-content .drag-upload {
+      width: calc(100% - 4px);
+      height: 96px;
+      text-align: center;
+      line-height: 100px;
+      color: #bfbfbf;
+      background-color: #f2f2f2;
+      border-radius: 5px;
+      border: dashed 2px #bfbfbf;
+      margin-bottom: 10px;
+      position: relative; }
+    .upload-file-upload .form-content > .active {
+      border: dashed 2px #7fc73f;
+      cursor: pointer;
+      color: #61ad12; }
+  .upload-file-upload .file-list {
+    width: 100%;
+    height: calc(100% - 120px);
+    overflow: auto; }
+    .upload-file-upload .file-list .file-item {
+      width: 100%;
+      height: 100px;
+      display: flex;
+      position: relative; }
+      .upload-file-upload .file-list .file-item .delete-button-container {
+        margin-left: 0;
+        margin-top: 0;
+        width: 20px;
+        height: 20px;
+        position: absolute;
+        border-radius: 50%;
+        z-index: 1;
+        background-color: #bfbfbf; }
+        .upload-file-upload .file-list .file-item .delete-button-container .delete-button {
+          position: absolute;
+          width: 100%;
+          height: 100%;
+          text-align: center;
+          line-height: 20px;
+          font-size: 15px;
+          color: white; }
+        .upload-file-upload .file-list .file-item .delete-button-container:hover {
+          cursor: pointer;
+          background-color: red; }
+      .upload-file-upload .file-list .file-item .image-icon-container {
+        margin-left: 0;
+        width: 100px;
+        height: 100%;
+        position: relative; }
+        .upload-file-upload .file-list .file-item .image-icon-container .image-container {
+          width: 80px;
+          height: 80px;
+          position: absolute;
+          overflow: hidden; }
+          .upload-file-upload .file-list .file-item .image-icon-container .image-container > img {
+            position: absolute;
+            max-width: 100%;
+            max-height: 100%; }
+      .upload-file-upload .file-list .file-item .image-name {
+        width: calc(100% - 290px);
+        height: 20px;
+        line-height: 20px;
+        overflow: hidden;
+        text-overflow: ellipsis; }
+      .upload-file-upload .file-list .file-item .image-filesize {
+        width: 90px;
+        height: 20px;
+        line-height: 20px;
+        overflow: hidden;
+        text-overflow: ellipsis;
+        text-align: right; }
+      .upload-file-upload .file-list .file-item .flag-icon-container {
+        width: 100px;
+        height: 100%;
+        margin-right: 0;
+        position: relative; }
+        .upload-file-upload .file-list .file-item .flag-icon-container .custom-checkbox {
+          position: absolute;
+          width: 20px;
+          height: 20px;
+          border-radius: 5px;
+          border: solid 1px #bfbfbf;
+          background-color: white; }
+          .upload-file-upload .file-list .file-item .flag-icon-container .custom-checkbox:hover {
+            cursor: pointer; }
+        .upload-file-upload .file-list .file-item .flag-icon-container .custom-checkbox-checked {
+          background-color: #7fc73f; }
+      .upload-file-upload .file-list .file-item:hover {
+        background-color: #f3fde8; }
+  .upload-file-upload .button {
+    width: 95%;
+    height: 70px;
+    font-size: 20px;
+    text-align: center;
+    line-height: 70px;
+    border-radius: 5px;
+    color: white;
+    background-color: #61ad12; }
+    .upload-file-upload .button:hover {
+      cursor: pointer; }
+    .upload-file-upload .button:active {
+      background-color: #7fc73f; }
+
+/*# sourceMappingURL=index.css.map */

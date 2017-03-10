@@ -1,0 +1,214 @@
+@import "generic.scss";
+
+.upload-file-upload{
+    @extend .center-position;
+    @extend .shadow;
+    position: absolute;
+
+    width: 50%;
+    min-width: 400px;
+    height: 70%;
+    min-height: 400px;
+    background-color: white;
+
+    & .form-label{
+        @extend .center-position;
+        width: 95%;
+        height: 100px;
+        color: #bfbfbf;
+        font-size: 40px;
+        text-align: center;
+        line-height: 100px;
+        border-bottom: solid 1px #bfbfbf;
+        margin-bottom: 10px;
+    } // .form-label
+
+    & .form-content{
+        @extend .center-position;
+        width: 95%;
+        height: calc(100% - 190px);
+        position: relative;
+
+        & .input-file{
+            position: absolute;
+            margin-left: 0;
+            width: 100%;
+            height: 100px;
+            opacity: 0;
+            z-index: 1;
+
+            &:hover{
+                cursor: pointer;
+            }
+        }
+
+        & .drag-upload{
+            width: calc(100% - 4px);
+            height: 96px;
+            text-align: center;
+            line-height: 100px;
+            color: #bfbfbf;
+            background-color: #f2f2f2;
+            border-radius: 5px;
+            border: dashed 2px #bfbfbf;
+            margin-bottom: 10px;
+            position: relative;
+
+            // &:hover{
+                // border: dashed 2px $theme_color;
+                // cursor: pointer;
+                // color: $theme_color_dark;
+            // }
+        }
+
+        & > .active{
+            border: dashed 2px $theme_color;
+            cursor: pointer;
+            color: $theme_color_dark;
+        }
+
+    } // .form-content
+
+    & .file-list{
+        width: 100%;
+        height: calc(100% - 120px);
+        overflow: auto;
+
+        & .file-item{
+            width: 100%;
+            height: 100px;
+            display: flex;
+            position: relative;
+
+            & .delete-button-container{
+                @extend .center-position;
+                margin-left: 0;
+                margin-top: 0;
+                width: 20px;
+                height: 20px;
+                position: absolute;
+                border-radius: 50%;
+                z-index: 1;
+                background-color: #bfbfbf;
+
+                & .delete-button{
+                    @extend .center-position;
+                    position: absolute;
+                    width: 100%;
+                    height: 100%;
+                    text-align: center;
+                    line-height: 20px;
+                    font-size: 15px;
+                    color: white;
+                }
+
+                &:hover{
+                    cursor: pointer;
+                    background-color: red;
+                }
+
+            }
+
+            & .image-icon-container{
+                margin-left: 0;
+                width: 100px;
+                height: 100%;
+                position: relative;
+
+                & .image-container{
+                    @extend .center-position;
+                    width: 80px;
+                    height: 80px;
+                    position: absolute;
+                    overflow: hidden;
+
+                    & > img{
+                        @extend .center-position;
+                        position: absolute;
+                        
+                        max-width: 100%;
+                        max-height: 100%;
+                    }
+
+                }
+
+            }
+
+            & .image-name{
+                @extend .center-position;
+                width: calc(100% - 290px);
+                height: 20px;
+                line-height: 20px;
+                overflow: hidden;
+                text-overflow: ellipsis;
+            }
+
+            & .image-filesize{
+                @extend .center-position;
+                width: 90px;
+                height: 20px;
+                line-height: 20px;
+                overflow: hidden;
+                text-overflow: ellipsis;
+                text-align: right;
+            }
+
+            & .flag-icon-container{
+                @extend .center-position;
+                width: 100px;
+                height: 100%;
+                margin-right: 0;
+                position: relative;
+
+                & .custom-checkbox{
+                    @extend .center-position;
+                    position: absolute;
+                    width: 20px;
+                    height: 20px;
+                    border-radius: 5px;
+                    border: solid 1px #bfbfbf;
+                    background-color: white;
+
+                    &:hover{
+                        cursor: pointer;
+                    }
+
+                }
+
+                & .custom-checkbox-checked{
+                    background-color: $theme_color;
+                }
+
+            }
+
+            &:hover{
+                background-color: $theme_color_light;
+            }
+            
+        }
+
+    } // .file-list
+
+    & .button{
+        @extend .center-position;
+        // margin-top: -80px;
+        width: 95%;
+        height: 70px;
+        font-size: 20px;
+        text-align: center;
+        line-height: 70px;
+        border-radius: 5px;
+        color: white;
+        background-color: $theme_color_dark;
+
+        &:hover{
+            cursor: pointer;
+        }
+
+        &:active{
+            background-color: $theme_color;
+        }
+
+    }
+
+}
